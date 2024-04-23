@@ -1,4 +1,3 @@
-import loginimage from "../assets/images/login.png";
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
@@ -10,9 +9,7 @@ function Login() {
 return (
   <>
     <div className="w-[100%] flex gap-[2em]">
-      <div className="w-[50%]">
-        <img src={loginimage} className="w-[100%] h-[150vh]" />
-      </div>
+    
       <div className="w-[40%] flex flex-col gap-[4em] my-[2em]">
         <h1 className="flex justify-center text-[2.5em] font-bold">
           Login to your Account
