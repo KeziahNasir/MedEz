@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from"react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Notfound from "../pages/Notfound.jsx";
 import Layout from "../pages/Layout.jsx";
 import Login from "../pages/Login.jsx";
@@ -8,16 +8,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
-           <Route
-          path="*"
-          element={
-            <Layout>
-              {" "}
-              <Notfound />{" "}
-            </Layout>
-          }
-        />
-             <Route
+        <Route
           path="/Login"
           element={
             <Layout>
@@ -26,7 +17,7 @@ function Router() {
             </Layout>
           }
         />
-          <Route
+        <Route
           path="/Signup"
           element={
             <Layout>
@@ -40,7 +31,16 @@ function Router() {
           element={
             <Layout>
               {" "}
-              <AppointmentForm/>{" "}
+              <AppointmentForm />{" "}
+            </Layout>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              {" "}
+              <Notfound />{" "}
             </Layout>
           }
         />
@@ -49,16 +49,3 @@ function Router() {
   );
 }
 export default Router;
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -14,7 +14,7 @@ function AppointmentForm() {
   const [formErrors, setFormErrors] = useState({});
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate form inputs
+   
     const errors = {};
     if (!patientName.trim()) {
       errors.patientName = "Patient name is required";
@@ -45,7 +45,7 @@ function AppointmentForm() {
       setFormErrors(errors);
       return;
     }
-    // Reset form fields and errors after successful submission
+  
     setPatientName("");
     setPatientNumber("");
     setPatientGender("default");
@@ -62,7 +62,7 @@ function AppointmentForm() {
     <div className="appointment-form-section">
       <h1 className="legal-siteTitle">
         <Link to="/">
-          Health <span className="legal-siteSign">+</span>
+          Med <span className="legal-siteSign">Ez</span>
         </Link>
       </h1>
       <div className="form-container">

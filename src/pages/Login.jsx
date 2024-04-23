@@ -9,15 +9,15 @@ function Login() {
 return (
   <>
     <div className="w-[100%] flex gap-[2em]">
-    
+
       <div className="w-[40%] flex flex-col gap-[4em] my-[2em]">
-        <h1 className="flex justify-center text-[2.5em] font-bold">
+        <h1 className="flex justify-center text-[2.5em] font-bold bg-black">
           Login to your Account
         </h1>
         <input
           type="text"
           placeholder="Email Address"
-          className="border-2  px-[5em] py-8 rounded-full shadow-lg"
+          className="border- 2  px-[5em] py-8 rounded-full shadow-lg"
         />
         <div
           className="flex border-3 rounded-full shadow-lg justify-between pr-4  items-center
@@ -48,11 +48,11 @@ return (
           <div className="border-b-2 border-gray-700 w-[300px]"></div>
         </div>
         <div className="flex gap-10 justify-center  items-center  text-blue-600 flex-col sm:flex-row border border-gray-500 shadow-[0_0_5px_lightgray] mt-10 mb-10 bg-white rounded-full px-[4em] py-4">
-          <img
+          {/* <img
             src="src/assets/images/google-color-icon.svg"
             width={40}
             className="pl-2"
-          />
+          /> */}
           <input
             type="text"
             placeholder="Sign Up With Google"
