@@ -5,6 +5,7 @@ import Home from "../pages/Home.jsx";
 import Doctor from "../pages/Doctor.jsx";
 import NotFound from "../pages/Notfound.jsx";
 import Layout from "../pages/Layout.jsx";
+import Review from "../components/Review.jsx"
 function Router() {
   return (
     <BrowserRouter>
@@ -17,6 +18,15 @@ function Router() {
             </Layout>
           }
         />
+
+        <Route
+          path="reviews"
+          element={
+            <Layout>
+              <Review />
+            </Layout>
+          }
+        />
         <Route
           path="doctors"
           element={
@@ -25,6 +35,7 @@ function Router() {
             </Layout>
           }
         />
+
         <Route
           path="*"
           element={

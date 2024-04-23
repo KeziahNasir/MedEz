@@ -1,7 +1,9 @@
+import Doctors from "../components/Doctors"
+
 function Doctor() {
     return(
         <>
-        <Doctor/>
+        <Doctors/>
         </>
     )
     

@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCommentDots,
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import "../Styles/Navbar.css";
+import { FaCommentDots,FaBars } from "react-icons/fa";
+import { FaXmark } from "react-icons/fa6";
+
+import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -31,7 +28,7 @@ function Navbar() {
     <div className="navbar-section">
       <h1 className="navbar-title">
         <Link to="/">
-          Health <span className="navbar-sign">+</span>
+          Med <span className="navbar-sign">Ez</span>
         </Link>
       </h1>
 
@@ -43,22 +40,22 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <a href="#services" className="navbar-links">
+          <a href="/services" className="navbar-links">
             Services
           </a>
         </li>
         <li>
-          <a href="#about" className="navbar-links">
+          <a href="/about" className="navbar-links">
             About
           </a>
         </li>
         <li>
-          <a href="#reviews" className="navbar-links">
+          <a href="/reviews" className="navbar-links">
             Reviews
           </a>
         </li>
         <li>
-          <a href="#doctors" className="navbar-links">
+          <a href="/doctors" className="navbar-links">
             Doctors
           </a>
         </li>
@@ -70,13 +67,13 @@ function Navbar() {
         disabled={isButtonDisabled}
         onClick={handleChatBtnClick}
       >
-        <FontAwesomeIcon icon={faCommentDots} /> Live Chat
+        <FaCommentDots /> Live Chat
       </button>
 
       {/* Mobile */}
       <div className={`mobile-navbar ${nav ? "open-nav" : ""}`}>
         <div onClick={openNav} className="mobile-navbar-close">
-          <FontAwesomeIcon icon={faXmark} className="hamb-icon" />
+          <FaXmark className="hamb-icon" />
         </div>
 
         <ul className="mobile-navbar-links">
@@ -115,8 +112,7 @@ function Navbar() {
 
       {/* Hamburger Icon */}
       <div className="mobile-nav">
-        <FontAwesomeIcon
-          icon={faBars}
+        <FaBars
           onClick={openNav}
           className="hamb-icon"
         />
