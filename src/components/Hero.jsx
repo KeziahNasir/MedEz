@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Doctor from "../assets/doctor-picture.png";
 import { FaCalendarCheck,FaAngleUp } from "react-icons/fa";
 import { useNavigate  } from "react-router-dom";
+import "../styles/Hero.css";
+
 
 function Hero() {
   const navigate = useNavigate();

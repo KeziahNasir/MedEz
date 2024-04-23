@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { customerReviews } from "../script/Review.jsx";
+import "../styles/Reviews.css";
+
 
 function Review() {
   let rMessage, rName, rLocation;
