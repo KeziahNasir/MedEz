@@ -8,7 +8,7 @@ function DoctorCard({img, name, title, reviews,stars}) {
       <p className="dt-card-name">{name}</p>
       <p className="dt-card-title">{title}</p>
       <p className="dt-card-stars">
-        <FaStar className="b-[F7BB50#] pr-[6px]" />
+        <FaStar className={{ color: "#F7BB50", paddingRight: "6px" }} />
         {stars}
         <span className="dt-card-reviews"> ({reviews}+ Reviews)</span>
       </p>
