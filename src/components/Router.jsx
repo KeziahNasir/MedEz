@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home.jsx";
 import Doctor from "../pages/Doctor.jsx";
 import NotFound from "../pages/Notfound.jsx";
+import Layout from "../pages/Layout.jsx";
 function Router() {
   return (
     <BrowserRouter>
@@ -20,7 +21,7 @@ function Router() {
           path="doctors"
           element={
             <Layout>
-              <Doctor />{" "}
+              <Doctor />
             </Layout>
           }
         />
