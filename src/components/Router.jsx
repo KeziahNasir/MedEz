@@ -8,7 +8,6 @@ import Layout from "../pages/Layout.jsx";
 import Review from "../components/Review.jsx"
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
-import About from "./About.jsx";
 function Router() {
   return (
     <BrowserRouter>
@@ -22,14 +21,7 @@ function Router() {
           }
         />
 
-<Route
-          path="/aboutus"
-          element={
-            <Layout>
-              <About />
-            </Layout>
-          }
-        />
+
         <Route
           path="reviews"
           element={

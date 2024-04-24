@@ -1,5 +1,5 @@
 import React from "react";
-import Doctor from "../Assets/doctor-book-appointment.png";
+import Doctor from "../assets/doctor-book-appointment.png";
 import { FaCircleCheck, FaCalendarCheck } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import "../styles/BookAppointment.css";
@@ -19,10 +19,10 @@ function BookAppointment() {
 
       <div className="ba-text-content">
         <h3 className="ba-title">
-          <span>Why Choose Health</span>
+          <span>Why Choose MedEz</span>
         </h3>
         <p className="ba-description">
-          Discover the reasons to choose Health Plus for your healthcare needs.
+          Discover the reasons to choose MedEz for your healthcare needs.
           Experience expert care, convenience, and personalized solutions,
           making your well-being our top priority. Join us on a journey to
           better health and a happier life.
