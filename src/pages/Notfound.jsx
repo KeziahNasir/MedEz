@@ -1,11 +1,17 @@
-import Layout from "./Layout"
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-function NotFound(){
+function NotFound() {
+  const deployedURL = window.location.href;
+  const location = useLocation();
 
-return(
-    <h1>page not found</h1>
-)
-
-
+  return (
+    <div className="container mx-auto">
+      <h1>Page Not Found</h1>
+      <p>The requested URL {deployedURL} was not found on this server.</p>
+      <p>The requested URL {location.pathname} was not found on this server.</p>
+    </div>
+  );
 }
-export default NotFound
+
+export default NotFound;

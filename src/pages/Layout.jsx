@@ -1,18 +1,14 @@
-import Nav from "../components/Nav";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-function Layout({children}) {
+function Layout({ children }) {
   return (
-    <>
-      <div>
-        <Nav />
-        <main className="flex-1 min-h-screen">{children}</main>
-
-        <Footer />
-      </div>
-    </>
+    <div className=" flex min-h-[100vh]  flex-col ">
+      <Navbar/>
+      <main className=" flex-1">{children}</main>
+      <Footer />
+    </div>
   );
 }
 
 export default Layout;
-

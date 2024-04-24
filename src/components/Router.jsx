@@ -1,46 +1,65 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Notfound from "../pages/Notfound.jsx";
+// import './App.css';
+import Home from "../pages/Home.jsx";
+import Doctor from "../pages/Doctor.jsx";
+import NotFound from "../pages/Notfound.jsx";
 import Layout from "../pages/Layout.jsx";
+import Review from "../components/Review.jsx"
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
-import AppointmentForm from "../pages/AppointmentForm.jsx";
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route
-          path="/Login"
+          path="/"
           element={
             <Layout>
-              {" "}
-              <Login />{" "}
+              <Home />
             </Layout>
           }
         />
+
+
         <Route
+          path="reviews"
+          element={
+            <Layout>
+              <Review />
+              </Layout>
+          }/>
+        <Route
+          path="doctors"
+          element={
+            <Layout>
+              <Doctor />
+            </Layout>
+          }
+        />
+<Route
           path="/Signup"
           element={
             <Layout>
-              {" "}
-              <Signup />{" "}
+             
+              <Signup />
             </Layout>
           }
         />
+          <Route
+      path="/Login"
+      element={
+        <Layout>
+         
+          <Login />
+        </Layout>
+      }
+    />
         <Route
           path="*"
           element={
             <Layout>
-              {" "}
-              <AppointmentForm />{" "}
-            </Layout>
-          }
-        />
-        <Route
-          path="*"
-          element={
-            <Layout>
-              {" "}
-              <Notfound />{" "}
+              <NotFound />
             </Layout>
           }
         />
