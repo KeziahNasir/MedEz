@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useLocation } from "react-router-dom";
 
@@ -15,3 +16,16 @@ function NotFound() {
 }
 
 export default NotFound;
+=======
+import Layout from "./Layout"
+
+function NotFound(){
+
+return(
+    <h1>page not found</h1>
+)
+
+
+}
+export default NotFound
+>>>>>>> 8f4e99dca015c93fb6cbdbc082c4e8e34bc7c016
