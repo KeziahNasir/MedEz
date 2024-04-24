@@ -4,7 +4,7 @@ import { FaXmark } from "react-icons/fa6";
 
 import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
@@ -59,6 +59,17 @@ function Navbar() {
             Doctors
           </a>
         </li>
+        <li>
+            <a onClick={openNav} href="#signup">
+              SignUp
+            </a>
+          </li>
+
+          <li>
+            <a onClick={openNav} href="#login">
+              Login
+            </a>
+          </li>
       </ul>
 
       <button
@@ -102,6 +113,19 @@ function Navbar() {
               Doctors
             </a>
           </li>
+
+          <li>
+            <a onClick={openNav} href="#signup">
+              SignUp
+            </a>
+          </li>
+
+          <li>
+            <a onClick={openNav} href="#login">
+              Login
+            </a>
+          </li>
+
           <li>
             <a onClick={openNav} href="#contact">
               Contact
