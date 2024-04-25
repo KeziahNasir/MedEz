@@ -1,6 +1,6 @@
 import React from "react";
 import Doctor from "../assets/doctor-group.png";
-import SolutionStep from "./SolutionStep";
+import SolutionStep from "../components/SolutionStep";
 import "../styles/About.css";
 
 function About() {

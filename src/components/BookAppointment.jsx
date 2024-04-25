@@ -8,7 +8,7 @@ function BookAppointment() {
   const navigate = useNavigate();
 
   const handleBookAppointmentClick = () => {
-    navigate("/appointment");
+    navigate("/appointments");
   };
 
   return (
