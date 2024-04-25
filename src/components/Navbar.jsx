@@ -60,15 +60,15 @@ function Navbar() {
           </a>
         </li>
         <li>
-            <a onClick={openNav} href="#signup">
-              SignUp
-            </a>
+        <a href="/signup" className="navbar-links">
+            Sign Up
+          </a>
           </li>
 
           <li>
-            <a onClick={openNav} href="#login">
-              Login
-            </a>
+          <a href="/login" className="navbar-links">
+            Log In
+          </a>
           </li>
       </ul>
 
