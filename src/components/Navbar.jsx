@@ -65,15 +65,17 @@ function Navbar() {
           </Link>
         </li>
         <li>
-            <Link onClick={openNav} to="/signup">
-              SignUp
-            </Link>
+
+        <a href="/signup" className="navbar-links">
+            Sign Up
+          </a>
           </li>
 
           <li>
-            <Link onClick={openNav} to="/login">
-              Login
-            </Link>
+          <a href="/login" className="navbar-links">
+            Log In
+          </a>
+ Development
           </li>
       </ul>
 

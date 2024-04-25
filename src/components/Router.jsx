@@ -5,7 +5,7 @@ import Home from "../pages/Home.jsx";
 import Doctor from "../pages/Doctor.jsx";
 import NotFound from "../pages/Notfound.jsx";
 import Layout from "../pages/Layout.jsx";
-import Review from "../components/Review.jsx"
+import Review from "../components/Review.jsx";
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
 import Aboutus from "../pages/Aboutus.jsx";
@@ -40,13 +40,16 @@ function Router() {
               <Appointments />
               </Layout>
           }/>
+=======
+
         <Route
           path="/reviews"
           element={
             <Layout>
               <Review />
-              </Layout>
-          }/>
+            </Layout>
+          }
+        />
         <Route
           path="/doctors"
           element={
@@ -85,6 +88,20 @@ function Router() {
           element={
             <Layout>
               <SearchDoctor />
+
+        <Route
+          path="/Signup"
+          element={
+            <Layout>
+              <Signup />
+            </Layout>
+          }
+        />
+        <Route
+          path="/Login"
+          element={
+            <Layout>
+              <Login />
             </Layout>
           }
         />
