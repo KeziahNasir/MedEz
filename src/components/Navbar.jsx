@@ -40,26 +40,32 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <a href="/services" className="navbar-links">
+        <Link to="/services"
+          className="navbar-links">
             Services
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about" className="navbar-links">
+        <Link to="/aboutus"
+
+           className="navbar-links">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/reviews" className="navbar-links">
+
+                  <Link to="/reviews"
+ className="navbar-links">
             Reviews
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/doctors" className="navbar-links">
+          <Link to="/doctors" className="navbar-links">
             Doctors
-          </a>
+          </Link>
         </li>
         <li>
+
         <a href="/signup" className="navbar-links">
             Sign Up
           </a>
@@ -69,6 +75,7 @@ function Navbar() {
           <a href="/login" className="navbar-links">
             Log In
           </a>
+ Development
           </li>
       </ul>
 
@@ -94,42 +101,42 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#services">
+            <Link onClick={openNav} to="/services">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#about">
+            <Link onClick={openNav} to="/about">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#reviews">
+            <Link onClick={openNav} to="reviews">
               Reviews
-            </a>
+            </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#doctors">
+            <Link onClick={openNav} to="/doctors">
               Doctors
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a onClick={openNav} href="#signup">
+            <Link onClick={openNav} to="/signup">
               SignUp
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a onClick={openNav} href="#login">
+            <Link onClick={openNav} to="/login">
               Login
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a onClick={openNav} href="#contact">
+            <Link onClick={openNav} to="/contact">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

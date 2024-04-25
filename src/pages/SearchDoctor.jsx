@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SearchDoctors from './SearchDoctors';
+import SearchDoctors from '../components/SearchDoctors';
 
 const SearchDoctor = () => {
     const [searchResults, setSearchResults] = useState([]);

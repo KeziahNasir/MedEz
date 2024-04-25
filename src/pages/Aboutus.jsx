@@ -1,7 +1,9 @@
 import About from "../components/About";
 
 function Aboutus() {
-    return <About />;
+    return( 
+    <About />
+);
   }
   
   export default Aboutus;

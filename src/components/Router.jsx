@@ -8,6 +8,11 @@ import Layout from "../pages/Layout.jsx";
 import Review from "../components/Review.jsx";
 import Login from "../pages/Login.jsx";
 import Signup from "../pages/Signup.jsx";
+import Aboutus from "../pages/Aboutus.jsx";
+import Appointments from "../pages/Appointments.jsx";
+import SearchDoctor from "../pages/SearchDoctor.jsx";
+import Legal from "../pages/Legal.jsx";
+
 function Router() {
   return (
     <BrowserRouter>
@@ -20,9 +25,25 @@ function Router() {
             </Layout>
           }
         />
+  <Route
+          path="/aboutus"
+          element={
+            <Layout>
+              <Aboutus />
+            </Layout>
+          }
+        />
+<Route
+          path="/appointments"
+          element={
+            <Layout>
+              <Appointments />
+              </Layout>
+          }/>
+=======
 
         <Route
-          path="reviews"
+          path="/reviews"
           element={
             <Layout>
               <Review />
@@ -30,13 +51,44 @@ function Router() {
           }
         />
         <Route
-          path="doctors"
+          path="/doctors"
           element={
             <Layout>
               <Doctor />
             </Layout>
           }
         />
+<Route
+          path="/signup"
+          element={
+            <Layout>
+             <Signup />
+            </Layout>
+          }
+        />
+          <Route
+      path="/login"
+      element={
+        <Layout>
+         <Login />
+        </Layout>
+      }
+    />
+              <Route
+      path="/legal"
+      element={
+        <Layout>
+         <Legal />
+        </Layout>
+      }
+    />
+
+      <Route
+          path="/searchdoctor"
+          element={
+            <Layout>
+              <SearchDoctor />
+
         <Route
           path="/Signup"
           element={
