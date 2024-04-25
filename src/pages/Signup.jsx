@@ -36,7 +36,10 @@ function Register() {
       setErrorMessage("Passwords do not match");
     } else if (formInput.password.length < 8) {
       setErrorMessage("Password should have a minimum of 8 characters");
-    } else {
+    }
+    else if (formInput.phoneNumber.length <10) {
+      setErrorMessage("Phone number should have a minimum & maximum of 10 characters");
+      }  else {
       setErrorMessage("");
       createUserWithEmailAndPassword(
         auth,
