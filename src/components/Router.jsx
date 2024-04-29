@@ -12,6 +12,9 @@ import Aboutus from "../pages/Aboutus.jsx";
 import Appointments from "../pages/Appointments.jsx";
 import SearchDoctor from "../pages/SearchDoctor.jsx";
 import Legal from "../pages/Legal.jsx";
+import DoctorsCard from "./DoctorsCard.jsx";
+import PatientsCard from "./PatientsCard.jsx";
+
 
 function Router() {
   return (
@@ -88,6 +91,7 @@ function Router() {
           element={
             <Layout>
               <SearchDoctor />
+</Layout>}/>
 
         <Route
           path="/Signup"
@@ -97,11 +101,28 @@ function Router() {
             </Layout>
           }
         />
+        
         <Route
           path="/Login"
           element={
             <Layout>
               <Login />
+            </Layout>
+          }
+        />
+        <Route
+          path="/doctors-profile"
+          element={
+            <Layout>
+              <DoctorsCard />
+            </Layout>
+          }
+        />
+          <Route
+          path="/patients-profile"
+          element={
+            <Layout>
+              <PatientsCard />
             </Layout>
           }
         />

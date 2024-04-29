@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaCommentDots,FaBars } from "react-icons/fa";
+import { FaCommentDots, FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 import "../styles/Navbar.css";
@@ -40,22 +40,17 @@ function Navbar() {
           </Link>
         </li>
         <li>
-        <Link to="/services"
-          className="navbar-links">
+          <Link to="/services" className="navbar-links">
             Services
           </Link>
         </li>
         <li>
-        <Link to="/aboutus"
-
-           className="navbar-links">
+          <Link to="/aboutus" className="navbar-links">
             About
           </Link>
         </li>
         <li>
-
-                  <Link to="/reviews"
- className="navbar-links">
+          <Link to="/reviews" className="navbar-links">
             Reviews
           </Link>
         </li>
@@ -65,22 +60,20 @@ function Navbar() {
           </Link>
         </li>
         <li>
-
-        <a href="/signup" className="navbar-links">
+          <a href="/signup" className="navbar-links">
             Sign Up
           </a>
-          </li>
+        </li>
 
-          <li>
+        <li>
           <a href="/login" className="navbar-links">
             Log In
           </a>
- Development
-          </li>
+        </li>
       </ul>
 
       <button
-        className="navbar-btn"
+        className="flex gap-2 justify-between items-center navbar-btn"
         type="button"
         disabled={isButtonDisabled}
         onClick={handleChatBtnClick}
@@ -96,57 +89,40 @@ function Navbar() {
 
         <ul className="mobile-navbar-links">
           <li>
-            <Link onClick={openNav} to="/">
+            <a href="/">
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link onClick={openNav} to="/services">
-              Services
-            </Link>
+            <a href="/services">Services</a>
           </li>
           <li>
-            <Link onClick={openNav} to="/about">
-              About
-            </Link>
+            <a href="/aboutus">About</a>
           </li>
           <li>
-            <Link onClick={openNav} to="reviews">
-              Reviews
-            </Link>
+            <a href="/reviews">Reviews</a>
           </li>
           <li>
-            <Link onClick={openNav} to="/doctors">
-              Doctors
-            </Link>
+            <a href="/doctors">Doctors</a>
           </li>
 
           <li>
-            <Link onClick={openNav} to="/signup">
-              SignUp
-            </Link>
+          <a href="/signup">Sign Up</a>{" "}
           </li>
 
           <li>
-            <Link onClick={openNav} to="/login">
-              Login
-            </Link>
+            <a href="/login">Log In</a>{" "}
           </li>
 
           <li>
-            <Link onClick={openNav} to="/contact">
-              Contact
-            </Link>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>
 
       {/* Hamburger Icon */}
       <div className="mobile-nav">
-        <FaBars
-          onClick={openNav}
-          className="hamb-icon"
-        />
+        <FaBars onClick={openNav} className="hamb-icon" />
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
-import SubscribeNewsletter from "./SubscribeNewsletter";
+import SubscribeNewsletter from "../components/SubscribeNewsletter";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -19,7 +19,7 @@ function Footer() {
             </p>
           </div>
 
-          <SubscribeNewsletter />
+          <SubscribeNewsletter/>
         </div>
 
         <div className="ft-list">
