@@ -46,7 +46,7 @@ function Hero() {
             services at your fingertips.
           </p>
           <button
-            className="text-appointment-btn"
+            className="flex gap-2 justify-between items-center text-appointment-btn"
             type="button"
             onClick={handleBookAppointmentClick}
           >
