@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate()
   const [formInput, setFormInput] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +19,7 @@ function Register() {
   function handleInputChange(e) {
     setFormInput({ ...formInput, [e.target.name]: e.target.value });
   }
+  
 
   function handleSignUp() {
     console.log(confirmPassword);
@@ -49,17 +52,20 @@ function Register() {
         .then(async (userData) => {
           const user = userData.user;
           console.log(user);
-
+          
           if (user) {
             const newUser = await addDoc(collection(db, "users"), formInput);
             console.log(newUser);
+            navigate("/login")
+
+
           }
         })
         .catch((error) => console.log(error));
     }
   }
   return (
-    <div className="container mx-auto flex gap-7">
+    <div className="container mx-auto flex gap-7 justify-center items-center">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col flex-1 border gap-10">
           <h2 className="font-bold text-6xl mt-8">Create An Account</h2>
@@ -120,14 +126,19 @@ function Register() {
           </div>
 
           <button
-            className="border  border-gray-400 bg-[#45C9A1] rounded-full text-white px-[4em] py-6 font-bold text-2xl"
+            className="border  border-gray-400 bg-[#1A8EFD] rounded-full text-white px-[4em] py-6 font-bold text-2xl"
             onClick={handleSignUp}
           >
             Create Account
-          </button>
-          <p className="border-b-2">OR</p>
-          <p className="flex justify-center">
-            Already Have An Account?{" "}
+          </button >
+          <div className="flex gap-3 items-center mt-6">
+          <div className="border-b-2 border-gray-700 w-1/2"></div>
+          <div className="text-[#45C9A1]">or</div>
+          <div className="border-b-2 border-gray-700 w-1/2"></div>
+          
+        </div>
+        <p className="font-sans text-2xl mt-6">
+          Already Have An Account?{" "}
             <a href="/login" className="text-[#45C9A1]">
               sign in
             </a>
