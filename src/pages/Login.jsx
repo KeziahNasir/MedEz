@@ -109,7 +109,7 @@ function Login() {
         </div>
         <div className="text-2xl mt-6  py-4 px-6  border border-gray-400 w-[600px] flex  items-center rounded-2xl text-blue-800 justify-center">
           <FcGoogle size={24} />
-          <p>Sign Up With Google</p>
+          <p>SignUp With Google</p>
         </div>
         <p className="font-sans text-2xl mt-6">
           Don't Have An Account Yet?{" "}
