@@ -12,6 +12,7 @@ function Register() {
     emailAddress: "",
     phoneNumber: "",
     password: "",
+    usertype:"Doctor, Patient"
   });
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -56,6 +57,7 @@ function Register() {
           if (user) {
             const newUser = await addDoc(collection(db, "users"), formInput);
             console.log(newUser);
+            alert("successfuly signup")
             navigate("/login")
 
 
