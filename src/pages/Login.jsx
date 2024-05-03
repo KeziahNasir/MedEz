@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import {  signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,8 @@ function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate
+
+  const navigate = useNavigate();
   const handleShowPassword = () => {
     setShowPassword((prev) => !prev);
   };
@@ -34,26 +35,21 @@ function Login() {
     setErrors(errors);
     if (Object.keys(errors).length === 0) {
       console.log("Login successful!");
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(async (userData) => {
+          const user = userData.user;
+          console.log(user);
+          alert("successfully loged in");
+          navigate("/");
+
+          if (user) {
+            const newUser = await addDoc(collection(db, "users"), showPassword);
+            console.log(newUser);
+          }
+        })
+        .catch((error) => console.log(error));
     }
-   
-    signInWithEmailAndPassword(
-      auth,
-     showPassword.emailAddress,
-      showPassword.password
-    )
-      .then(async (userData) => {
-        const user = userData.user;
-        console.log(user);
-      
-
-        if (user) {
-          const newUser = await addDoc(collection(db, "users") ,showPassword);
-          console.log(newUser);
-            navigate("/home")
-        }
-      })
-      .catch((error) => console.log(error));
-
   };
   return (
     <div className="flex justify-center items-center">
@@ -72,8 +68,8 @@ function Login() {
           {errors.email && <p className="text-red-500">{errors.email}</p>}
           <div>
             <input
-            className="mt-4 py-6 px-8 border border-gray-400 w-[600px] flex justify-between items-center rounded-2xl"
-            type={showPassword ? "text" : "password"}
+              className="mt-4 py-6 px-8 border border-gray-400 w-[600px] flex justify-between items-center rounded-2xl"
+              type={showPassword ? "text" : "password"}
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
